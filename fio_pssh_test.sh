@@ -28,9 +28,9 @@ done
 
 for i in ${names[@]}; do
 	readarray -t arr <fio-${i}.log
-	echo -e "system: ${i}\tWrTPT: $(echo ${arr[0]} | awk '{print $2}')\tMiB/s" >> fio-wr-tpt-results.log
-	echo -e "system: ${i}\tWrIOPS: $(echo ${arr[1]} | awk '{print $2}')\tk" >> fio-wr-iops-results.log
-	echo -e "system: ${i}\tRdTPT: $(echo ${arr[2]} | awk '{print $2}')\tMiB/s" >> fio-rd-tpt-results.log
-	echo -e "system: ${i}\tRdIOPS: $(echo ${arr[3]} | awk '{print $2}')\tk" >> fio-rd-iops-results.log
+	echo -e "system: ${i}\tWrTPT: $(echo ${arr[0]} | awk '{print $2}')" >> fio-wr-tpt-results.log
+	echo -e "system: ${i}\tWrIOPS: $(echo ${arr[1]} | awk '{print $2}')" >> fio-wr-iops-results.log
+	echo -e "system: ${i}\tRdTPT: $(echo ${arr[2]} | awk '{print $2}')" >> fio-rd-tpt-results.log
+	echo -e "system: ${i}\tRdIOPS: $(echo ${arr[3]} | awk '{print $2}')" >> fio-rd-iops-results.log
 done
 echo "end date: $(date)"
