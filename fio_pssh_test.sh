@@ -12,7 +12,7 @@ then
 	pbsnodes -avS | grep free | awk -F ' ' '{print tolower($1)}' >> hosts.txt
 fi
 
-pssh -p 200 -t 1200 -i -h hosts.txt "cd $wdir && ./fio_test.sh" >> fio_pssh.log 2>&1
+pssh -p 301 -t 1500 -i -h hosts.txt "cd $wdir && ./fio_test.sh" >> fio_pssh.log 2>&1
 
 
 sleep 10
