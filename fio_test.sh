@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#sudo yum install fio -y
+sudo yum install fio -y
 
 TEMP_DIR=$(mount | grep sdb1 | awk '{print $3}')/fiotest 
 mkdir -p $TEMP_DIR
