@@ -4,5 +4,7 @@ Scripts to run the FIO disk performance benchmark on Azure. The tests rely on ps
 
 To run 
 ```
-./fio_pssh_test.sh
+./fio_pssh_test.sh "disk" "testtype"
 ```
+
+where disk can be "ssd" or "nvme", and testtype can be "complete" or "quick".
